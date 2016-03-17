@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Flexbox的布局</title>
+	<style>
+		* {
+			margin: 0px;
+			padding: 20px;
+		} 
+		#banner {
+			display: flex;
+			justify-content: space-between;
+			align-items:center;
+			flex-wrap:nowrap;
+			
+		}
+		.item1 {
+			width: 150px;
+			height: 120px;
+			border:1px solid #f00; 
+			text-align: center;
+		}
+		.item2 {
+			width: 150px;
+			height: 100px;
+			border: 1px solid #f00;
+			text-align: center;
+		}
+		.item3 {
+			width: 150px;
+			height: 40px;
+			border: 1px solid #f00;
+			text-align: center;
+		}
+		.item4 {
+			width: 150px;
+			height: 200px;
+			border: 1px solid #0ff;
+			text-align: center;
+		}
+		@media screen and (max-width: 640px){
+			#banner {
+			align-items:flex-start;
+			justify-content: flex-start;
+			flex-flow: row wrap;
+			}
+			.item4 {
+				order:-1;
+			}
+		}
+
+
+	</style>
+ </head>
+ <body>
+ 	<div id="banner">
+ 		<div class="item1"></div>
+ 		<div class="item2"></div>
+ 		<div class="item3"></div>
+ 		<div class="item4"></div>
+ 	</div>
+ </body>
+ </html>
